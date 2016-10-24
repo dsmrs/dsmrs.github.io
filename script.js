@@ -1,5 +1,6 @@
 
 $( document ).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip()
   var box = $('#box');
 
   $('#hiking').on('click', function (e) {
