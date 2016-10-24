@@ -1,3 +1,29 @@
-.container {
-  background-image: url("/assets/img/bg.jpg");
+html, body, .container-table {
+   height: 100%;
+}
+.container-table {
+   display: table;
+}
+.vertical-center-row {
+   display: table-cell;
+   vertical-align: middle;
+}
+
+.hidden {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+}
+
+.visuallyhidden {
+
+}
+
+.box {
+  max-height: 300px;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
 }
