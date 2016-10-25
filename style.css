@@ -1,34 +1,19 @@
 html, body, .container-table {
   font-size: 18px;
-   height: 100%;
+  height: 100%;
 }
 
-a {
-	display: inline-block;
-	text-decoration: none;
-}
 .container-table {
    display: table;
 }
+
 .vertical-center-row {
    display: table-cell;
    vertical-align: middle;
 }
-a > i {
-  margin: 3px;
-}
 
-.hidden {
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: max-height 0.8s;
-  -moz-transition: max-height 0.8s;
-  transition: max-height 0.8s;
-}
-
-.box {
-  max-height: 300px;
-  -webkit-transition: max-height 0.8s;
-  -moz-transition: max-height 0.8s;
-  transition: max-height 0.8s;
+.content {
+  display: none;
+  height: 0px;
+  opacity: 0;
 }
