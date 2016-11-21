@@ -1,6 +1,61 @@
 html, body, .container-table {
-  font-size: 18px;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 16px;
   height: 100%;
+}
+
+.menu {
+  padding: 10px;
+}
+
+.bg {
+  background-color: #ff9933;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: bold;
+  color: white;
+}
+
+a {
+  color: white;
+  font-family: Menlo;
+  font-size: Bold;
+}
+
+.link {
+  color: white;
+  font-family: Menlo;
+  font-size: Bold;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  color: #2bc3ea;
+  text-decoration: none;
+}
+
+a:active {
+  color: #2bc3ea;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: square;
+  list-style: square;
 }
 
 .container-table {
@@ -10,6 +65,30 @@ html, body, .container-table {
 .vertical-center-row {
    display: table-cell;
    vertical-align: middle;
+}
+
+.square {
+  display: inline-block;
+  background-color: white;
+	width: 9px;
+	height: 9px;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.square-o {
+  display: inline-block;
+  border-color: white;
+	width: 9px;
+	height: 9px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.padding {
+  padding: 10px;
 }
 
 .content {
