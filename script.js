@@ -10,10 +10,10 @@ $( document ).ready(function() {
     elementToHide.animate({
       height: "0px",
       opacity: "0"
-    }, 1000);
+    }, 500);
     setTimeout(function () {
       elementToHide.hide();
-    }, 1000);
+    }, 500);
   }
 
   function show(element) {
@@ -22,7 +22,7 @@ $( document ).ready(function() {
     elementToShow.animate({
       height: "300px",
       opacity: "1"
-    }, 1000);
+    }, 500);
   }
 
   function toggleContent(element) {
@@ -31,7 +31,7 @@ $( document ).ready(function() {
       currentElement = element;
       setTimeout(function () {
         show(element);
-      }, 1000);
+      }, 500);
     }
   }
   var ids = {}
