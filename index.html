@@ -4,15 +4,6 @@
     <meta charset="utf-8">
     <title>Dorian Somers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116133123-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-116133123-1');
-  </script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -63,5 +54,36 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-116133123-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-116133123-1');
+    </script>
+    <script type="text/javascript">
+      var utmRemoverRun = false;
+      function utmRemover() {
+        if (!utmRemoverRun) { // only run once
+        utmRemoverRun = true;
+        var cleanSearch = window.location.search
+          .replace(/utm_[^&]+&?/g, '') // removes utm_xxx parameters
+          .replace(/&$/, '')  // removes & if last character
+          .replace(/^\?$/, '')  // removes ? if only remaining character
+          ;
+        // some pass utm_xxxx in the hash
+        var cleanHash = window.location.hash
+          .replace(/utm_[^&]+&?/g, '') // removes utm_xxx parameters
+          .replace(/&$/, '')  // removes & if last character
+          .replace(/^\#$/, '')  // removes # if only remaining character
+          ;
+        window.history.replaceState({}, '', window.location.pathname + cleanSearch + cleanHash);
+        }
+      };
+      setTimeout(utmRemover, 2000); // remove after 2 second
+      // These need to run after the pageview command
+      if (typeof ga !== 'undefined') ga(utmRemover);  // remove after normal Analytics has run
+    </script>
   </body>
 </html>
