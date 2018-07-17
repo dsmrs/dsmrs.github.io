@@ -6,6 +6,12 @@ html, body, .container-table {
   height: 100%;
 }
 
+.modal h4 {
+  color: black;
+  font-family: Menlo;
+  font-size: Bold;
+}
+
 .menu {
   padding: 10px;
 }
@@ -24,6 +30,7 @@ a {
   color: white;
   font-family: Menlo;
   font-size: Bold;
+  outline : none;
 }
 
 .link {
